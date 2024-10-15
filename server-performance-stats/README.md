@@ -16,6 +16,7 @@ The script provide a comprehensive overview of your server's current state inclu
 ## Getting Started
 ### Clone the repository
 ```sh
+git clone git@github.com:emmanuelkaringi/Devops-Projects.git
 cd server-performance-stats
 ```
 
