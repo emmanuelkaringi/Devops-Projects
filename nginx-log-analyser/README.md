@@ -7,7 +7,7 @@ This project provides a set of bash scripts to analyze Nginx access logs. The sc
     1. Top 5 IP addresses with the most requests
     2. Top 5 most requested paths
     3. Top 5 response status codes
-    4, Top 5 user agents
+    4. Top 5 user agents
 
 ## Prerequisites
 - Bash shell
