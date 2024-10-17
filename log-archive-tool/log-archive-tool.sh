@@ -1,5 +1,16 @@
 #!/bin/bash
 
+########
+# Author: Emmanuel Kariithi
+# Date: 16-10-2024
+#
+# Version: v1
+#
+# Log Archive Tool
+#
+# This script archives logs by compressing them and storing them in a new directory
+########
+
 set -e
 
 usage() {
