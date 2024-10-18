@@ -31,7 +31,8 @@
     <h2>Setup</h2>
     <ol>
         <li>Fork or clone this repository.</li>
-        <li>Create the <code>gh-pages</code> branch manually.</li>
+        <li>Create the <code>gh-pages</code> branch manually. Otherwise, the github actions will throw an error.</li>
+        <li>Allow read and write permissions under Settings > Actions > General > Workflow permissions.</li>
         <li>Make changes to the <code>index.html</code> file and push them to the <code>main</code> branch.</li>
         <li>The GitHub Actions workflow will automatically deploy your changes to GitHub Pages.</li>
     </ol>
