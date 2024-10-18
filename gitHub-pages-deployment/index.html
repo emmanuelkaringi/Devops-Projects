@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>GitHub Deployment Workflow</title>
+</head>
+<body>
+    <h1>GitHub Deployment Workflow</h1>
+
+    <p>This project demonstrates a simple GitHub Actions workflow to automatically deploy a static website to GitHub Pages.</p>
+
+    <h2>Features</h2>
+    <ul>
+        <li>Automatic deployment of <code>index.html</code> to GitHub Pages</li>
+        <li>Deployment triggered only when <code>index.html</code> is changed</li>
+        <li>Continuous Integration and Continuous Deployment (CI/CD) using GitHub Actions</li>
+    </ul>
+
+    <h2>How it works</h2>
+    <ol>
+        <li>The repository contains a simple <code>index.html</code> file.</li>
+        <li>A GitHub Actions workflow is defined in <code>.github/workflows/deploy.yml</code>.</li>
+        <li>When changes are pushed to the <code>main</code> branch and <code>index.html</code> is modified, the workflow is triggered.</li>
+        <li>The workflow builds and deploys the website to GitHub Pages.</li>
+        <li>The deployed website is accessible at <a>https://&lt;username&gt;.github.io/gh-deployment-workflow/</a>.</li>
+        <li>The deployed website is accessible at <a href="https://learning.xyz/">https://learning.xyz/</a>.</li>
+    </ol>
+
+    <h2>Setup</h2>
+    <ol>
+        <li>Fork or clone this repository.</li>
+        <li>Create the <code>gh-pages</code> branch manually.</li>
+        <li>Make changes to the <code>index.html</code> file and push them to the <code>main</code> branch.</li>
+        <li>The GitHub Actions workflow will automatically deploy your changes to GitHub Pages.</li>
+    </ol>
+
+    <p>Feel free to modify the <code>index.html</code> file to customize the website!</p>
+
+    <h2>Adding a Custom Domain</h2>
+    <p>To add a custom domain to your GitHub Pages site, follow these steps:</p>
+
+    <ol>
+        <li>
+            <p>Go to your repository settings and navigate to the "Pages" section.</p>
+            <div class="screenshot-placeholder">
+                [Screenshot: Repository Settings - Pages section]
+            </div>
+        </li>
+        <li>
+            <p>Under "Custom domain", enter your domain name and click "Save".</p>
+            <div class="screenshot-placeholder">
+                [Screenshot: Custom domain input field]
+            </div>
+        </li>
+        <li>
+            <p>Add a CNAME file to your repository with your custom domain (GitHub can add it automatically after completing step 4).</p>
+            <pre><code>echo "www.yourdomain.com" > CNAME</code></pre>
+        </li>
+        <li>
+            <p>Configure your DNS settings with your domain registrar:</p>
+            <ul>
+                <li>For an apex domain (example.com), create A records pointing to GitHub's IP addresses. Use this <a href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain">guide.</a></li>
+                <li>For a subdomain (www.example.com), create a CNAME record pointing to your GitHub Pages URL.</li>
+            </ul>
+            <div class="screenshot-placeholder">
+                <img src="images/DNS-records.png" alt="DNS Rcords">
+            </div>
+        </li>
+        <li>
+            <p>Wait for DNS changes to propagate (this can take up to 24 hours).</p>
+        </li>
+        <li>
+            <p>Ensure HTTPS is enabled for your custom domain in the repository settings.</p>
+            <div class="screenshot-placeholder">
+                
+            </div>
+        </li>
+    </ol>
+
+    <p>After completing these steps, your GitHub Pages site should be accessible via your custom domain with HTTPS enabled.</p>
+</body>
+</html>
