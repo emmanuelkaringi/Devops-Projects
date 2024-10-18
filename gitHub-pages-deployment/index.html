@@ -24,8 +24,7 @@
         <li>A GitHub Actions workflow is defined in <code>.github/workflows/deploy.yml</code>.</li>
         <li>When changes are pushed to the <code>main</code> branch and <code>index.html</code> is modified, the workflow is triggered.</li>
         <li>The workflow builds and deploys the website to GitHub Pages.</li>
-        <li>The deployed website is accessible at <a>https://&lt;username&gt;.github.io/gh-deployment-workflow/</a>.</li>
-        <li>The deployed website is accessible at <a href="https://learning.xyz/">https://learning.xyz/</a>.</li>
+        <li>The deployed website is accessible at <a href="https://learningxyz.xyz ">https://learningxyz.xyz</a>.</li>
     </ol>
 
     <h2>Setup</h2>
@@ -33,8 +32,10 @@
         <li>Fork or clone this repository.</li>
         <li>Create the <code>gh-pages</code> branch manually. Otherwise, the github actions will throw an error.</li>
         <li>Allow read and write permissions under Settings > Actions > General > Workflow permissions.</li>
-        <div class="screenshot-placeholder">
-            <img src="images/permissions.png" alt="Github Permissions">
+        <div class="image-container">
+            <div class="screenshot-placeholder">
+                <img src="images/permissions.png" alt="Github Permissions">
+            </div>
         </div>
         <li>Make changes to the <code>index.html</code> file and push them to the <code>main</code> branch.</li>
         <li>The GitHub Actions workflow will automatically deploy your changes to GitHub Pages.</li>
@@ -47,38 +48,38 @@
 
     <ol>
         <li>
-            <p>Go to your repository settings and navigate to the "Pages" section.</p>
-            <div class="screenshot-placeholder">
-                [Screenshot: Repository Settings - Pages section]
-            </div>
-        </li>
-        <li>
-            <p>Under "Custom domain", enter your domain name and click "Save".</p>
-            <div class="screenshot-placeholder">
-                [Screenshot: Custom domain input field]
-            </div>
-        </li>
-        <li>
-            <p>Add a CNAME file to your repository with your custom domain (GitHub can add it automatically after completing step 4).</p>
-            <pre><code>echo "www.yourdomain.com" > CNAME</code></pre>
-        </li>
-        <li>
-            <p>Configure your DNS settings with your domain registrar:</p>
+            <p>Purchase domain name and configure your DNS settings with your domain registrar (I used <a href="https://www.namecheap.com/">Namecheap</a>):</p>
             <ul>
                 <li>For an apex domain (example.com), create A records pointing to GitHub's IP addresses. Use this <a href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain">guide.</a></li>
                 <li>For a subdomain (www.example.com), create a CNAME record pointing to your GitHub Pages URL.</li>
             </ul>
-            <div class="screenshot-placeholder">
-                <img src="images/DNS-records.png" alt="DNS Rcords">
+            <div class="image-container">
+                <div class="screenshot-placeholder">
+                    <img src="images/DNS-records.png" alt="DNS Rcords">
+                </div>
             </div>
+        </li>
+        <li>
+            <p>Go to your repository settings and navigate to the "Pages" section. Under "Custom domain", enter your domain name and click "Save".</p>
+            <div class="image-container">
+                <div class="screenshot-placeholder">
+                    <img src="images/custom-domain.png" alt="Github Pages Settings">
+                </div>
+            </div>
+        </li>
+        <li>
+            <p>Add a CNAME file to your repository with your custom domain (GitHub can add it automatically sometimes).</p>
+            <pre><code>echo "www.yourdomain.com" > CNAME</code></pre>
         </li>
         <li>
             <p>Wait for DNS changes to propagate (this can take up to 24 hours).</p>
         </li>
         <li>
             <p>Ensure HTTPS is enabled for your custom domain in the repository settings.</p>
-            <div class="screenshot-placeholder">
-                
+            <div class="image-container">
+                <div class="screenshot-placeholder">
+                    <img src="images/https.png" alt="Enforce HTTPS">
+                </div>
             </div>
         </li>
     </ol>
