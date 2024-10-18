@@ -20,20 +20,24 @@ pre {
     border-radius: 6px;
     overflow-x: auto;
 }
-img {
-    max-width: 100%;
-    height: auto;
+.image-container {
+    margin: 20px 0;
     border: 1px solid #ddd;
     border-radius: 4px;
-    padding: 5px;
-    margin: 10px 0;
+    overflow: hidden;
+}
+.image-container img {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 .screenshot-placeholder {
     background-color: #f0f0f0;
     border: 2px dashed #ccc;
-    height: 300px;
+    min-height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px 0;
+    font-style: italic;
+    color: #666;
 }
