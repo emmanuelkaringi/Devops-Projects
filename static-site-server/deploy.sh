@@ -13,9 +13,9 @@
 
 LOCAL_DIR="test-site/"
 REMOTE_USER="ec2-user"
-REMOTE_HOST="ec2-18-207-151-248.compute-1.amazonaws.com"
+REMOTE_HOST="IP Addres"
 REMOTE_DIR="/var/www/html"
-SSH_KEY="/home/immah/Downloads/devops-practice.pem"
+SSH_KEY="key-path/name.pem"
 
 # Function to run a command with error checking
 run_command() {
