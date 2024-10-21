@@ -6,3 +6,4 @@ This repository contains projects listed on [roadmap.sh](https://roadmap.sh/) un
 3. [**Nginx Log Analyser**](https://roadmap.sh/projects/nginx-log-analyser) here's my [**solution**](nginx-log-analyser)
 4. [**GitHub Pages Deployment**](https://roadmap.sh/projects/github-actions-deployment-workflow) here's my [**solution**](gitHub-pages-deployment)
 5. [**SSH Remote Server Setup**](https://roadmap.sh/projects/ssh-remote-server-setup) here's my [**solution**](ssh-remote-server-setup)
+6. [Static Site Server](https://roadmap.sh/projects/static-site-server) here's my [**solution**](static-site-server)
