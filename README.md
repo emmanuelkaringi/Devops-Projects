@@ -8,4 +8,5 @@ This repository contains projects listed on [roadmap.sh](https://roadmap.sh/) un
 5. [**SSH Remote Server Setup**](https://roadmap.sh/projects/ssh-remote-server-setup) here's my [**solution**](ssh-remote-server-setup)
 6. [**Static Site Server**](https://roadmap.sh/projects/static-site-server) here's my [**solution**](static-site-server)
 7. [**Basic DNS Setup**](https://roadmap.sh/projects/basic-dns) here's my [**solution**](basic-DNS-setup)
-7. [**Simple Monitoring**](https://roadmap.sh/projects/simple-monitoring-dashboard) here's my [**solution**](simple-monitoring)
+8. [**Simple Monitoring**](https://roadmap.sh/projects/simple-monitoring-dashboard) here's my [**solution**](simple-monitoring)
+9. [**Dummy Systemd Service**](https://roadmap.sh/projects/dummy-systemd-service) here's my [**solution**](dummy-systemd-service)
