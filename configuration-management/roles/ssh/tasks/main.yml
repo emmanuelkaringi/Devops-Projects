@@ -1,0 +1,5 @@
+- name: Add the SSH public key
+  authorized_key:
+    user: ec2-user
+    state: present
+    key: "{{ lookup('file', 'roles/ssh/files/public_key.pub') }}"

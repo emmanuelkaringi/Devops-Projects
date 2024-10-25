@@ -1,0 +1,18 @@
+- name: Upload the tarball to the server
+  copy:
+    src: /location/to/website.tar.xz
+    dest: /tmp
+
+- name: Extract the tar.xz file
+  unarchive:
+    src: /tmp/website.tar.xz
+    dest: /var/www/html
+    remote_src: yes
+    extra_opts: [--xz]
+  
+- name: Ensure proper permissions
+  find:
+    paths: /var/www/html
+    recurse: yes
+    patterns: "*.html"
+  register: html_files

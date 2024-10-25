@@ -1,0 +1,63 @@
+- name: Install NGINX
+  dnf:
+    name: nginx
+    state: present
+
+- name: Ensure NGINX is started and enabled
+  service:
+    name: nginx
+    state: started
+    enabled: true
+  
+- name: Create the /var/www/html directory
+  file:
+    path: /var/www/html
+    state: directory
+    owner: ec2-user
+    group: ec2-user
+    mode: '0755'
+  
+- name: Set up NGINX configuration
+  copy:
+    content: |
+      user nginx;
+      worker_processes auto;
+      error_log /var/log/nginx/error.log;
+      pid /run/nginx.pid;
+
+      events {
+          worker_connections 1024;
+      }
+
+      http {
+          include /etc/nginx/mime.types;
+          default_type application/octet-stream;
+          sendfile on;
+          keepalive_timeout 65;
+
+          server {
+              listen 80;
+              server_name _;
+
+              root /var/www/html;
+              index index.html;
+
+              location / {
+                  try_files $uri $uri/ =404;
+              }
+          }
+      }
+    dest: /etc/nginx/nginx.conf
+    owner: root
+    group: root
+    mode: '0644'
+  
+
+- name: Ensure proper permissions
+  file:
+    path: /var/www/html
+    owner: nginx
+    group: nginx
+    mode: '0755'
+    recurse: yes
+  notify: Restart NGINX

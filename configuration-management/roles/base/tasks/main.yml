@@ -1,0 +1,17 @@
+- name: Update and upgrade the server
+  dnf:
+    name: "*"
+    state: latest
+
+- name: Install basic utilities
+  dnf:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - vim
+    - git
+
+- name: Install fail2ban
+  dnf:
+    name: fail2ban
+    state: present
